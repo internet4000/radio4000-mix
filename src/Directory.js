@@ -9,13 +9,20 @@ export default class Directory extends Component {
     constructor() {
 	super();
 	this.state = {
-	    channels: []
+	    channels: [],
+	    search: ''
 	}
     }
     
     componentDidMount() {
 	getChannels().then(channels => {
 	    this.setState({channels});
+	})
+    }
+
+    updateSearch(e) {
+	this.setState({
+	    search: e.target.value
 	})
     }
     
@@ -29,11 +36,17 @@ export default class Directory extends Component {
 	    <aside className={ `Aside Directory ${this.props.className}` }>
 	      <div className="ChannelCards">
 		<p>
-		  <i>Select which Radio4000 to play:</i>
+		  <i>Select which Radio4000 you would like to play with:</i>
 		</p>
-		{ this.state.channels.map((channel, index) => <ChannelCard
-								    key={ index }
-								model={ channel } />) }
+		<input
+		  onChange={ (event) => this.updateSearch(event) }
+		  placeholder="Search radios"
+		  className="Input Input--search"
+		  type="search"/>
+
+		{ this.state.channels
+		    .filter(el => el.title.includes(this.state.search) ? el : null)
+		    .map((channel, index) => <ChannelCard key={ index } model={ channel } />) }
 	    </div>
 		</aside>
 	)
