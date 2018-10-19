@@ -34,7 +34,7 @@ radio4000-player {
     max-width: 25rem;
 }
 radio4000-player .TrackList-list {
-        min-height: 40vh;
+        min-height: 38vh;
 }
 
 .Deck {
