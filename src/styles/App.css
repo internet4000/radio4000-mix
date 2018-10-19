@@ -1,10 +1,10 @@
 .SiteTitle {
     position: fixed;
     z-index: 3;
-    top: 0.6rem;
-    left: 1.5rem;
-    max-width: 5.5rem;
-    padding: 0.7rem;
+    top: 0;
+    left: 0;
+    max-width: 7.5rem;
+    padding: 1rem;
 }
 
 .App {
