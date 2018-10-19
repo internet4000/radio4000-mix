@@ -45,7 +45,7 @@ export default class Directory extends Component {
 		  type="search"/>
 
 		{ this.state.channels
-		    .filter(el => el.title.includes(this.state.search) ? el : null)
+		    .filter(el => el.searchIndex.includes(this.state.search) ? el : null)
 		    .map((channel, index) => <ChannelCard key={ index } model={ channel } />) }
 	    </div>
 		</aside>
