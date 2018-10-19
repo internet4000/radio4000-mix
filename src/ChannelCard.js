@@ -4,31 +4,39 @@ import './styles/ChannelCard.css';
 
 function ChannelCard(props, context) {
 
-  const { title,
-	  tracks,
-	  slug } = props.model;
+    const { title,
+	    tracks,
+	    slug,
+	    body } = props.model;
 
-  const { setRadio } = context;
+    const { setRadio } = context;
 
-  if (!tracks) return null;
+    if (!tracks) return null;
 
-  return (
-    <article className="ChannelCard">
-      <span>{ title } ({ tracks.length })</span>
-      <div className="BtnGroup">
-	<button className="Btn"
-		title={`Send <${title}> to deck A`}
-		onClick={ () => setRadio('a', slug) }>A</button>
-	<button className="Btn"
-		title={`Send <${title}> to deck B`}
-		onClick={ () => setRadio('b', slug) }>B</button>
-      </div>
-    </article>
-  )
+    return (
+	<article className="ChannelCard">
+	  <div className="BtnGroup">
+	    <button className="Btn"
+		    title={`Send <${title}> to deck A`}
+		    onClick={ () => setRadio('a', slug) }>A</button>
+	  </div>
+	  
+	  <div className="ChannelCard-body">
+	    <span className="ChannelCard-title">{ title } ({ tracks.length })</span>
+	    <p>{ body } <span className="ChannelCard-slug">{ `@${slug}` }</span></p>
+	  </div>
+	  
+	  <div className="BtnGroup">
+	    <button className="Btn"
+		    title={`Send <${title}> to deck B`}
+		    onClick={ () => setRadio('b', slug) }>B</button>
+	  </div>
+	</article>
+    )
 }
 
 ChannelCard.contextTypes = {
-  setRadio: PropTypes.func
+    setRadio: PropTypes.func
 }
 
 export default ChannelCard;

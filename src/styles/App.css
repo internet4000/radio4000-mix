@@ -42,15 +42,12 @@ radio4000-player .TrackList-list {
     padding-right: 2rem;
 }
 
-.Deck-switcher input {
-    width: 100%;
-}
-
 .Input--search {
     width: 100%;
     padding: 0.5rem;
     font-size: 1rem;
     margin-top: 0.5rem;
+    border-radius: 3px;
 }
 input[type="search"] {
     -webkit-appearance: inherit;

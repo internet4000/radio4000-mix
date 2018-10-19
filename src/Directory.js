@@ -35,18 +35,17 @@ export default class Directory extends Component {
 	return (
 	    <aside className={ `Aside Directory ${this.props.className}` }>
 	      <div className="ChannelCards">
-		<p>
-		  <i>Select which Radio4000 you would like to play with:</i>
-		</p>
 		<input
 		  onChange={ (event) => this.updateSearch(event) }
-		  placeholder="Search radios"
+		  placeholder="Search Radio4000 channels"
 		  className="Input Input--search"
 		  type="search"/>
 
-		{ this.state.channels
-		    .filter(el => el.searchIndex.includes(this.state.search) ? el : null)
+		  <div className="Directory-list">
+		    { this.state.channels
+			.filter(el => el.searchIndex.includes(this.state.search) ? el : null)
 		    .map((channel, index) => <ChannelCard key={ index } model={ channel } />) }
+	    </div>
 	    </div>
 		</aside>
 	)
