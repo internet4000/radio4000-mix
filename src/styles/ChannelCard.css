@@ -3,8 +3,30 @@
     padding-bottom: 1em;
 }
 .ChannelCard {
-    padding: 0.5rem 0;
+    padding: 0.5rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    border-radius: 3px;
+}
+.ChannelCard:nth-child(even) {
+    background-color: rgba(0, 0, 0, 0.03);
+
+}
+.ChannelCard-title {
+    font-weight: bold;
+    margin-bottom: 0.2rem;
+}
+.ChannelCard-body {
+    font-size: 0.9rem;
+    width: 100%;
+    font-style: italic;
+    padding-right: 4rem;
+    display: flex;
+    flex-direction: column;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+.ChannelCard-slug {
+    font-size: 0.7rem;
 }

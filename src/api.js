@@ -15,7 +15,7 @@ function serialize(channels) {
 	    channel.tracks = Object.keys(channel.tracks);
 	}
 
-	channel.searchIndex = `${channel.title || ''} ${channel.description || ''} ${channel.slug || ''}`
+	channel.searchIndex = `${channel.title || ''} ${channel.body || ''} ${channel.slug || ''}`
 	
 	return channel
     })
