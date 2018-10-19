@@ -30,3 +30,7 @@ radio4000-player .Header-channel strong {
 	/* otherwise removed by reset */
 	font-weight: bold;
 }
+
+i {
+    font-style: italic;
+}

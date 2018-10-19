@@ -8,10 +8,14 @@ export default class DirectoryBtn extends Component {
   render() {
     return (
       <button onClick={ this.props.toggle }
-	      className="Btn DirectoryBtn">
-	<NavLink exact to="/">
-	  >
-	</NavLink>
+	      className="Btn DirectoryBtn Btn--toggle">
+	{
+	    this.props.isVisible ? (
+		'Hide directory'
+	    ) : (
+		'Show Directory'
+	    )
+	}
       </button>
     )
   }
