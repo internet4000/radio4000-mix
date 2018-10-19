@@ -26,7 +26,6 @@ class MixingTable extends Component {
   render() {
     return (
       <main className="SiteMain">
-	<p className="SiteIntro">Mix radio channels from Radio4000.com</p>
 	<div className="MixingTable">
 	  <section className="Section">
 	    <Deck radioSlug={ this.context.a }
