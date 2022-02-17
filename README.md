@@ -2,8 +2,6 @@
 
 > Mix radio channels from Radio4000.com
 
-Check it at https://mix.radio4000.com
-
 ## Development
 
 ``` bash
